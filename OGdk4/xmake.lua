@@ -3,7 +3,7 @@ add_rules("mode.debug", "mode.release")
 add_requires {
     "objfw",
     "ogobject",
-    "gtk4" --should be gdk-4.0 but ?
+    "gtk4"
 }
 
 target("OGdk4")

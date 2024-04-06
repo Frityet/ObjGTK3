@@ -1,5 +1,7 @@
 add_rules("mode.debug", "mode.release")
 
+includes("../packages.lua")
+
 add_requires {
     "objfw",
     "ogobject",

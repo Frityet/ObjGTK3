@@ -3,7 +3,7 @@ add_rules("mode.debug", "mode.release")
 add_requires {
     "objfw",
     "ogobject",
-    "gdk-pixbuf-2.0"
+    "gdk-pixbuf"
 }
 
 target("OGdkPixbuf")
@@ -14,7 +14,7 @@ target("OGdkPixbuf")
     add_headerfiles("include/(OGdkPixbuf/**.h)")
     add_mflags("-fno-objc-arc", "-fno-objc-arc-exceptions")
     set_warnings("none")
-    add_packages("objfw", "ogobject", "gdk-pixbuf-2.0")
+    add_packages("objfw", "ogobject", "gdk-pixbuf")
 
     add_deps("OGio")
 

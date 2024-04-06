@@ -1,10 +1,12 @@
 add_rules("mode.debug", "mode.release")
 
+includes("../packages.lua")
+
 add_requires {
     "objfw",
     "ogobject",
-    "gio-2.0",
-    "gio-unix-2.0"
+    "gio",
+    "gio-unix"
 }
 
 target("OGio")
@@ -15,5 +17,5 @@ target("OGio")
     add_headerfiles("include/(OGio/**.h)")
     add_mflags("-fno-objc-arc", "-fno-objc-arc-exceptions")
     set_warnings("none")
-    add_packages("objfw", "ogobject", "gio", "gio-unix-2.0")
+    add_packages("objfw", "ogobject", "gio", "gio-unix")
 
