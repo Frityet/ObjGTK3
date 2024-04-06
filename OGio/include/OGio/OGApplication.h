@@ -601,7 +601,7 @@
  * call to g_application_hold().
  *
  */
-- (void)release;
+- (void)releaseApp;
 
 /**
  * Runs the application.
