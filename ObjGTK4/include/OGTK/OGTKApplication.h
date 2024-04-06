@@ -5,6 +5,7 @@
  */
 
 #import <OGObject/OGObject.h>
+#import <OGio/OGApplication.h>
 
 #import <gtk/gtk.h>
 
@@ -82,7 +83,7 @@
  * [Getting Started with GTK: Basics](getting_started.html#basics)
  *
  */
-@interface OGTKApplication : OGObject
+@interface OGTKApplication : OGApplication
 {
 
 }

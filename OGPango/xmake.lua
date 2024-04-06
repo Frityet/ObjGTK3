@@ -2,7 +2,7 @@ add_rules("mode.debug", "mode.release")
 
 add_requires {
     "objfw",
-    "OGObject",
+    "ogobject",
     "pango"
 }
 
@@ -11,8 +11,8 @@ target("OGPango")
     add_files("src/**.m")
     add_includedirs("include/", { public = true })
     add_includedirs("include/OGPango", { private = true })
-    add_headerfiles("include/**.h")
+    add_headerfiles("include/(OGPango/**.h)")
     add_mflags("-fno-objc-arc", "-fno-objc-arc-exceptions")
     set_warnings("none")
-    add_packages("objfw", "OGObject", "pango")
+    add_packages("objfw", "ogobject", "pango")
 
