@@ -10,7 +10,7 @@
 
 @implementation OGTKShortcutAction
 
-- (instancetype)(nil)
+- (instancetype)initWithString: (OFString*)string
 {
 	GtkShortcutAction* gobjectValue = GTK_SHORTCUT_ACTION(gtk_shortcut_action_parse_string([string UTF8String]));
 

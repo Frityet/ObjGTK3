@@ -15,7 +15,7 @@
 	return GTK_MEDIA_STREAM([self gObject]);
 }
 
-- (void)ended
+- (void)markEnded
 {
 	gtk_media_stream_ended([self castedGObject]);
 }

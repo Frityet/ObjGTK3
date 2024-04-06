@@ -10,7 +10,7 @@
 
 @implementation OGTKATContext
 
-- (instancetype)(nil)
+- (instancetype)initWithAccesableRole:(GtkAccessibleRole)accessibleRole accessible:(GtkAccessible*)accessible display:(OGGdkDisplay*)display
 {
 	GtkATContext* gobjectValue = GTK_AT_CONTEXT(gtk_at_context_create(accessibleRole, accessible, [display castedGObject]));
 

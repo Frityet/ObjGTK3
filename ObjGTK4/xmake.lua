@@ -3,16 +3,18 @@ add_rules("mode.debug", "mode.release")
 add_requires {
     "objfw",
     "OGObject",
-    "pango"
+    "gtk4"
 }
 
-target("OGPango")
+target("ObjGTK4")
     set_kind(is_kind("shared") and "shared" or "static")
     add_files("src/**.m")
     add_includedirs("include/", { public = true })
-    add_includedirs("include/OGPango", { private = true })
+    add_includedirs("include/OGTK", { private = true })
     add_headerfiles("include/**.h")
     add_mflags("-fno-objc-arc", "-fno-objc-arc-exceptions")
     set_warnings("none")
-    add_packages("objfw", "OGObject", "pango")
+    add_packages("objfw", "OGObject", "gtk4")
+
+    add_deps("OGAtk", "OGdk4", "OGdkPixbuf", "OGio", "OGPango", "OGsk4")
 

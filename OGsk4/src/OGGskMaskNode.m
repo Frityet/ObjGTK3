@@ -10,7 +10,7 @@
 
 - (instancetype)initWithSource:(GskRenderNode*)source mask:(GskRenderNode*)mask maskMode:(GskMaskMode)maskMode
 {
-	GskMaskNode* gobjectValue = GSK_MASK_NODE(gsk_mask_node_new(source, mask, maskMode));
+	GskMaskNode* gobjectValue = (gsk_mask_node_new(source, mask, maskMode));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskMaskNode*)castedGObject
-{
-	return GSK_MASK_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)mask
 {

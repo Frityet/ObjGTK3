@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child radius:(float)radius
 {
-	GskBlurNode* gobjectValue = GSK_BLUR_NODE(gsk_blur_node_new(child, radius));
+	GskBlurNode* gobjectValue = (gsk_blur_node_new(child, radius));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskBlurNode*)castedGObject
-{
-	return GSK_BLUR_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

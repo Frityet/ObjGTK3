@@ -10,7 +10,7 @@
 
 - (instancetype)init:(GObject*)object
 {
-	GtkObjectExpression* gobjectValue = GTK_OBJECT_EXPRESSION(gtk_object_expression_new(object));
+	GtkObjectExpression* gobjectValue = (gtk_object_expression_new(object));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -26,7 +26,7 @@
 
 - (GtkObjectExpression*)castedGObject
 {
-	return GTK_OBJECT_EXPRESSION([self gObject]);
+	return ([self gObject]);
 }
 
 - (GObject*)object

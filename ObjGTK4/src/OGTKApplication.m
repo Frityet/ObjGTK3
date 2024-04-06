@@ -62,7 +62,7 @@
 
 - (OGMenu*)menuById:(OFString*)id
 {
-	GMenu* gobjectValue = GIO_MENU(gtk_application_get_menu_by_id([self castedGObject], [id UTF8String]));
+	GMenu* gobjectValue = G_MENU(gtk_application_get_menu_by_id([self castedGObject], [id UTF8String]));
 
 	OGMenu* returnValue = [OGMenu withGObject:gobjectValue];
 	return returnValue;
@@ -70,7 +70,7 @@
 
 - (OGMenuModel*)menubar
 {
-	GMenuModel* gobjectValue = GIO_MENU_MODEL(gtk_application_get_menubar([self castedGObject]));
+	GMenuModel* gobjectValue = G_MENU_MODEL(gtk_application_get_menubar([self castedGObject]));
 
 	OGMenuModel* returnValue = [OGMenuModel withGObject:gobjectValue];
 	return returnValue;

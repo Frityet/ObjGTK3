@@ -12,7 +12,7 @@
 
 - (instancetype)initWithTexture:(OGGdkTexture*)texture bounds:(const graphene_rect_t*)bounds
 {
-	GskTextureNode* gobjectValue = GSK_TEXTURE_NODE(gsk_texture_node_new([texture castedGObject], bounds));
+	GskTextureNode* gobjectValue = (gsk_texture_node_new([texture castedGObject], bounds));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -26,10 +26,7 @@
 	return self;
 }
 
-- (GskTextureNode*)castedGObject
-{
-	return GSK_TEXTURE_NODE([self gObject]);
-}
+
 
 - (OGGdkTexture*)texture
 {

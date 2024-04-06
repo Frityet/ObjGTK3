@@ -8,11 +8,6 @@
 
 @implementation OGGdkScrollEvent
 
-- (GdkScrollEvent*)castedGObject
-{
-	return GDK_SCROLL_EVENT([self gObject]);
-}
-
 - (void)deltasWithDeltaX:(double*)deltaX deltaY:(double*)deltaY
 {
 	gdk_scroll_event_get_deltas([self castedGObject], deltaX, deltaY);

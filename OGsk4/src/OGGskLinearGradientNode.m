@@ -10,7 +10,7 @@
 
 - (instancetype)initWithBounds:(const graphene_rect_t*)bounds start:(const graphene_point_t*)start end:(const graphene_point_t*)end colorStops:(const GskColorStop*)colorStops ncolorStops:(gsize)ncolorStops
 {
-	GskLinearGradientNode* gobjectValue = GSK_LINEAR_GRADIENT_NODE(gsk_linear_gradient_node_new(bounds, start, end, colorStops, ncolorStops));
+	GskLinearGradientNode* gobjectValue = (gsk_linear_gradient_node_new(bounds, start, end, colorStops, ncolorStops));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskLinearGradientNode*)castedGObject
-{
-	return GSK_LINEAR_GRADIENT_NODE([self gObject]);
-}
+
 
 - (const GskColorStop*)colorStops:(gsize*)nstops
 {

@@ -8,10 +8,5 @@
 
 @implementation OGGdkProximityEvent
 
-- (GdkProximityEvent*)castedGObject
-{
-	return GDK_PROXIMITY_EVENT([self gObject]);
-}
-
 
 @end

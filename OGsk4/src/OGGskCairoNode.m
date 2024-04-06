@@ -10,7 +10,7 @@
 
 - (instancetype)init:(const graphene_rect_t*)bounds
 {
-	GskCairoNode* gobjectValue = GSK_CAIRO_NODE(gsk_cairo_node_new(bounds));
+	GskCairoNode* gobjectValue = (gsk_cairo_node_new(bounds));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskCairoNode*)castedGObject
-{
-	return GSK_CAIRO_NODE([self gObject]);
-}
+
 
 - (cairo_t*)drawContext
 {

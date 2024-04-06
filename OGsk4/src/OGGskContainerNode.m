@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChildren:(GskRenderNode**)children nchildren:(guint)nchildren
 {
-	GskContainerNode* gobjectValue = GSK_CONTAINER_NODE(gsk_container_node_new(children, nchildren));
+	GskContainerNode* gobjectValue = (gsk_container_node_new(children, nchildren));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskContainerNode*)castedGObject
-{
-	return GSK_CONTAINER_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child:(guint)idx
 {

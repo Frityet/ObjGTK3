@@ -10,7 +10,7 @@
 
 - (instancetype)initWithBottom:(GskRenderNode*)bottom top:(GskRenderNode*)top blendMode:(GskBlendMode)blendMode
 {
-	GskBlendNode* gobjectValue = GSK_BLEND_NODE(gsk_blend_node_new(bottom, top, blendMode));
+	GskBlendNode* gobjectValue = (gsk_blend_node_new(bottom, top, blendMode));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskBlendNode*)castedGObject
-{
-	return GSK_BLEND_NODE([self gObject]);
-}
+
 
 - (GskBlendMode)blendMode
 {

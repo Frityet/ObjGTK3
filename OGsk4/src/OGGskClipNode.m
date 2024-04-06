@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child clip:(const graphene_rect_t*)clip
 {
-	GskClipNode* gobjectValue = GSK_CLIP_NODE(gsk_clip_node_new(child, clip));
+	GskClipNode* gobjectValue = (gsk_clip_node_new(child, clip));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskClipNode*)castedGObject
-{
-	return GSK_CLIP_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

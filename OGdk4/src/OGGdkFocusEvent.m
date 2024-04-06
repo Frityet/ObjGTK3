@@ -8,11 +8,6 @@
 
 @implementation OGGdkFocusEvent
 
-- (GdkFocusEvent*)castedGObject
-{
-	return GDK_FOCUS_EVENT([self gObject]);
-}
-
 - (bool)in
 {
 	bool returnValue = gdk_focus_event_get_in([self castedGObject]);

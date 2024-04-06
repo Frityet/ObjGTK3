@@ -34,7 +34,7 @@
 
 - (OGPermission*)permission
 {
-	GPermission* gobjectValue = GIO_PERMISSION(gtk_lock_button_get_permission([self castedGObject]));
+	GPermission* gobjectValue = G_PERMISSION(gtk_lock_button_get_permission([self castedGObject]));
 
 	OGPermission* returnValue = [OGPermission withGObject:gobjectValue];
 	return returnValue;

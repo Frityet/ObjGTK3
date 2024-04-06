@@ -12,7 +12,7 @@
 
 - (instancetype)initWithFont:(OGPangoFont*)font glyphs:(PangoGlyphString*)glyphs color:(const GdkRGBA*)color offset:(const graphene_point_t*)offset
 {
-	GskTextNode* gobjectValue = GSK_TEXT_NODE(gsk_text_node_new([font castedGObject], glyphs, color, offset));
+	GskTextNode* gobjectValue = (gsk_text_node_new([font castedGObject], glyphs, color, offset));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -26,10 +26,7 @@
 	return self;
 }
 
-- (GskTextNode*)castedGObject
-{
-	return GSK_TEXT_NODE([self gObject]);
-}
+
 
 - (const GdkRGBA*)color
 {

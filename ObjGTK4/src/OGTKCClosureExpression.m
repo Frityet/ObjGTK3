@@ -10,7 +10,7 @@
 
 - (instancetype)initWithValueType:(GType)valueType marshal:(GClosureMarshal)marshal nparams:(guint)nparams params:(GtkExpression**)params callbackFunc:(GCallback)callbackFunc userData:(gpointer)userData userDestroy:(GClosureNotify)userDestroy
 {
-	GtkCClosureExpression* gobjectValue = GTK_CCLOSURE_EXPRESSION(gtk_cclosure_expression_new(valueType, marshal, nparams, params, callbackFunc, userData, userDestroy));
+	GtkCClosureExpression* gobjectValue = (gtk_cclosure_expression_new(valueType, marshal, nparams, params, callbackFunc, userData, userDestroy));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -26,7 +26,7 @@
 
 - (GtkCClosureExpression*)castedGObject
 {
-	return GTK_CCLOSURE_EXPRESSION([self gObject]);
+	return ([self gObject]);
 }
 
 

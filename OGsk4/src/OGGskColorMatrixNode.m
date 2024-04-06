@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child colorMatrix:(const graphene_matrix_t*)colorMatrix colorOffset:(const graphene_vec4_t*)colorOffset
 {
-	GskColorMatrixNode* gobjectValue = GSK_COLOR_MATRIX_NODE(gsk_color_matrix_node_new(child, colorMatrix, colorOffset));
+	GskColorMatrixNode* gobjectValue = (gsk_color_matrix_node_new(child, colorMatrix, colorOffset));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskColorMatrixNode*)castedGObject
-{
-	return GSK_COLOR_MATRIX_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

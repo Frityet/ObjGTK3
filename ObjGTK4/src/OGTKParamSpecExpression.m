@@ -8,10 +8,5 @@
 
 @implementation OGTKParamSpecExpression
 
-- (GtkParamSpecExpression*)castedGObject
-{
-	return GTK_PARAM_EXPRESSION([self gObject]);
-}
-
 
 @end

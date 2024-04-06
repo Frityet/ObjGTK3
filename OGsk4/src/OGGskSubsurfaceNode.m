@@ -17,7 +17,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child subsurface:(gpointer)subsurface
 {
-	GskSubsurfaceNode* gobjectValue = GSK_SUBSURFACE_NODE(gsk_subsurface_node_new(child, subsurface));
+	GskSubsurfaceNode* gobjectValue = (gsk_subsurface_node_new(child, subsurface));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -31,10 +31,7 @@
 	return self;
 }
 
-- (GskSubsurfaceNode*)castedGObject
-{
-	return GSK_SUBSURFACE_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

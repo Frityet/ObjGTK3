@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child message:(char*)message
 {
-	GskDebugNode* gobjectValue = GSK_DEBUG_NODE(gsk_debug_node_new(child, message));
+	GskDebugNode* gobjectValue = (gsk_debug_node_new(child, message));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskDebugNode*)castedGObject
-{
-	return GSK_DEBUG_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

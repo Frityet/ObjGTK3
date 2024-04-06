@@ -10,7 +10,7 @@
 
 - (instancetype)initWithOutline:(const GskRoundedRect*)outline color:(const GdkRGBA*)color dx:(float)dx dy:(float)dy spread:(float)spread blurRadius:(float)blurRadius
 {
-	GskInsetShadowNode* gobjectValue = GSK_INSET_SHADOW_NODE(gsk_inset_shadow_node_new(outline, color, dx, dy, spread, blurRadius));
+	GskInsetShadowNode* gobjectValue = (gsk_inset_shadow_node_new(outline, color, dx, dy, spread, blurRadius));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskInsetShadowNode*)castedGObject
-{
-	return GSK_INSET_SHADOW_NODE([self gObject]);
-}
+
 
 - (float)blurRadius
 {

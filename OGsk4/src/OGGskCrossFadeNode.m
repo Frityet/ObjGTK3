@@ -10,7 +10,7 @@
 
 - (instancetype)initWithStart:(GskRenderNode*)start end:(GskRenderNode*)end progress:(float)progress
 {
-	GskCrossFadeNode* gobjectValue = GSK_CROSS_FADE_NODE(gsk_cross_fade_node_new(start, end, progress));
+	GskCrossFadeNode* gobjectValue = (gsk_cross_fade_node_new(start, end, progress));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskCrossFadeNode*)castedGObject
-{
-	return GSK_CROSS_FADE_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)endChild
 {

@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child shadows:(const GskShadow*)shadows nshadows:(gsize)nshadows
 {
-	GskShadowNode* gobjectValue = GSK_SHADOW_NODE(gsk_shadow_node_new(child, shadows, nshadows));
+	GskShadowNode* gobjectValue = (gsk_shadow_node_new(child, shadows, nshadows));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskShadowNode*)castedGObject
-{
-	return GSK_SHADOW_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

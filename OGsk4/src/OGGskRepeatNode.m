@@ -10,7 +10,7 @@
 
 - (instancetype)initWithBounds:(const graphene_rect_t*)bounds child:(GskRenderNode*)child childBounds:(const graphene_rect_t*)childBounds
 {
-	GskRepeatNode* gobjectValue = GSK_REPEAT_NODE(gsk_repeat_node_new(bounds, child, childBounds));
+	GskRepeatNode* gobjectValue = (gsk_repeat_node_new(bounds, child, childBounds));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskRepeatNode*)castedGObject
-{
-	return GSK_REPEAT_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

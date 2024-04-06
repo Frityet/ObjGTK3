@@ -10,11 +10,6 @@
 
 @implementation OGGdkDNDEvent
 
-- (GdkDNDEvent*)castedGObject
-{
-	return GDK_DND_EVENT([self gObject]);
-}
-
 - (OGGdkDrop*)drop
 {
 	GdkDrop* gobjectValue = GDK_DROP(gdk_dnd_event_get_drop([self castedGObject]));

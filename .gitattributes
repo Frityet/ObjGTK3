@@ -1,0 +1,20 @@
+ObjGTK4/**.h linguist-vendored
+ObjGTK4/**.m linguist-vendored
+
+OGAtk/**.h linguist-vendored
+OGAtk/**.m linguist-vendored
+
+OGdk4/**.h linguist-vendored
+OGdk4/**.m linguist-vendored
+
+OGdkPixbuf/**.h linguist-vendored
+OGdkPixbuf/**.m linguist-vendored
+
+OGio/**.h linguist-vendored
+OGio/**.m linguist-vendored
+
+OPango/**.h linguist-vendored
+OPango/**.m linguist-vendored
+
+OGsk4/**.h linguist-vendored
+OGsk4/**.m linguist-vendored

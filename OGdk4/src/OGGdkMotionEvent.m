@@ -8,10 +8,5 @@
 
 @implementation OGGdkMotionEvent
 
-- (GdkMotionEvent*)castedGObject
-{
-	return GDK_MOTION_EVENT([self gObject]);
-}
-
 
 @end

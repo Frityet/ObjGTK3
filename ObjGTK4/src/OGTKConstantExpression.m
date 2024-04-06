@@ -10,7 +10,7 @@
 
 - (instancetype)initForValue:(const GValue*)value
 {
-	GtkConstantExpression* gobjectValue = GTK_CONSTANT_EXPRESSION(gtk_constant_expression_new_for_value(value));
+	GtkConstantExpression* gobjectValue = GTK_EXPRESSION(gtk_constant_expression_new_for_value(value));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -22,11 +22,6 @@
 
 	g_object_unref(gobjectValue);
 	return self;
-}
-
-- (GtkConstantExpression*)castedGObject
-{
-	return GTK_CONSTANT_EXPRESSION([self gObject]);
 }
 
 - (const GValue*)value

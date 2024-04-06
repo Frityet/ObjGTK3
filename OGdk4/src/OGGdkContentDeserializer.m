@@ -18,7 +18,7 @@
 
 - (OGCancellable*)cancellable
 {
-	GCancellable* gobjectValue = GIO_CANCELLABLE(gdk_content_deserializer_get_cancellable([self castedGObject]));
+	GCancellable* gobjectValue = G_CANCELLABLE(gdk_content_deserializer_get_cancellable([self castedGObject]));
 
 	OGCancellable* returnValue = [OGCancellable withGObject:gobjectValue];
 	return returnValue;
@@ -33,7 +33,7 @@
 
 - (OGInputStream*)inputStream
 {
-	GInputStream* gobjectValue = GIO_INPUT_STREAM(gdk_content_deserializer_get_input_stream([self castedGObject]));
+	GInputStream* gobjectValue = G_INPUT_STREAM(gdk_content_deserializer_get_input_stream([self castedGObject]));
 
 	OGInputStream* returnValue = [OGInputStream withGObject:gobjectValue];
 	return returnValue;

@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child path:(GskPath*)path stroke:(const GskStroke*)stroke
 {
-	GskStrokeNode* gobjectValue = GSK_STROKE_NODE(gsk_stroke_node_new(child, path, stroke));
+	GskStrokeNode* gobjectValue = (gsk_stroke_node_new(child, path, stroke));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskStrokeNode*)castedGObject
-{
-	return GSK_STROKE_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

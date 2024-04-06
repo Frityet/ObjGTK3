@@ -8,10 +8,6 @@
 
 @implementation OGGdkTouchEvent
 
-- (GdkTouchEvent*)castedGObject
-{
-	return GDK_TOUCH_EVENT([self gObject]);
-}
 
 - (bool)emulatingPointer
 {

@@ -8,11 +8,6 @@
 
 @implementation OGGdkPadEvent
 
-- (GdkPadEvent*)castedGObject
-{
-	return GDK_PAD_EVENT([self gObject]);
-}
-
 - (void)axisValueWithIndex:(guint*)index value:(double*)value
 {
 	gdk_pad_event_get_axis_value([self castedGObject], index, value);

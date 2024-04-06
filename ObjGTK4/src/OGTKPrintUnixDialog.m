@@ -6,6 +6,8 @@
 
 #import "OGTKPrintUnixDialog.h"
 
+#if defined(OGTK_UNIX_DIALOG)
+
 #import "OGTKPageSetup.h"
 #import "OGTKPrinter.h"
 #import "OGTKWidget.h"
@@ -145,3 +147,5 @@
 
 
 @end
+
+#endif

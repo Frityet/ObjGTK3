@@ -6,12 +6,9 @@
 
 #import "OGGdkDeleteEvent.h"
 
-@implementation OGGdkDeleteEvent
+#import <gdk/gdkevents.h>
 
-- (GdkDeleteEvent*)castedGObject
-{
-	return GDK_DELETE_EVENT([self gObject]);
-}
+@implementation OGGdkDeleteEvent
 
 
 @end

@@ -12,7 +12,7 @@
 
 - (instancetype)initWithShader:(OGGskGLShader*)shader bounds:(const graphene_rect_t*)bounds args:(GBytes*)args children:(GskRenderNode**)children nchildren:(guint)nchildren
 {
-	GskGLShaderNode* gobjectValue = GSK_GL_SHADER_NODE(gsk_gl_shader_node_new([shader castedGObject], bounds, args, children, nchildren));
+	GskGLShaderNode* gobjectValue = (gsk_gl_shader_node_new([shader castedGObject], bounds, args, children, nchildren));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -26,10 +26,7 @@
 	return self;
 }
 
-- (GskGLShaderNode*)castedGObject
-{
-	return GSK_GL_SHADER_NODE([self gObject]);
-}
+
 
 - (GBytes*)args
 {

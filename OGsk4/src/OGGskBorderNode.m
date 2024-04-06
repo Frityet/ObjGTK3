@@ -10,7 +10,7 @@
 
 - (instancetype)initWithOutline:(const GskRoundedRect*)outline borderWidth:(const float*)borderWidth borderColor:(const GdkRGBA*)borderColor
 {
-	GskBorderNode* gobjectValue = GSK_BORDER_NODE(gsk_border_node_new(outline, borderWidth, borderColor));
+	GskBorderNode* gobjectValue = (gsk_border_node_new(outline, borderWidth, borderColor));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskBorderNode*)castedGObject
-{
-	return GSK_BORDER_NODE([self gObject]);
-}
+
 
 - (const GdkRGBA*)colors
 {

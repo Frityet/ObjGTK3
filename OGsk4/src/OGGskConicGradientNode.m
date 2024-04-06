@@ -10,7 +10,7 @@
 
 - (instancetype)initWithBounds:(const graphene_rect_t*)bounds center:(const graphene_point_t*)center rotation:(float)rotation colorStops:(const GskColorStop*)colorStops ncolorStops:(gsize)ncolorStops
 {
-	GskConicGradientNode* gobjectValue = GSK_CONIC_GRADIENT_NODE(gsk_conic_gradient_node_new(bounds, center, rotation, colorStops, ncolorStops));
+	GskConicGradientNode* gobjectValue = (gsk_conic_gradient_node_new(bounds, center, rotation, colorStops, ncolorStops));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskConicGradientNode*)castedGObject
-{
-	return GSK_CONIC_GRADIENT_NODE([self gObject]);
-}
+
 
 - (float)angle
 {

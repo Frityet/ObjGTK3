@@ -8,11 +8,6 @@
 
 @implementation OGGdkButtonEvent
 
-- (GdkButtonEvent*)castedGObject
-{
-	return GDK_BUTTON_EVENT([self gObject]);
-}
-
 - (guint)button
 {
 	guint returnValue = gdk_button_event_get_button([self castedGObject]);

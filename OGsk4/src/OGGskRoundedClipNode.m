@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child clip:(const GskRoundedRect*)clip
 {
-	GskRoundedClipNode* gobjectValue = GSK_ROUNDED_CLIP_NODE(gsk_rounded_clip_node_new(child, clip));
+	GskRoundedClipNode* gobjectValue = (gsk_rounded_clip_node_new(child, clip));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskRoundedClipNode*)castedGObject
-{
-	return GSK_ROUNDED_CLIP_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

@@ -6,6 +6,8 @@
 
 #import "OGTKPrintJob.h"
 
+#if defined(OGTK_PRINTER)
+
 #import "OGTKPrinter.h"
 #import "OGTKPrintSettings.h"
 #import "OGTKPageSetup.h"
@@ -248,3 +250,5 @@
 
 
 @end
+
+#endif

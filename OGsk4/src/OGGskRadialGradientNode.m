@@ -10,7 +10,7 @@
 
 - (instancetype)initWithBounds:(const graphene_rect_t*)bounds center:(const graphene_point_t*)center hradius:(float)hradius vradius:(float)vradius start:(float)start end:(float)end colorStops:(const GskColorStop*)colorStops ncolorStops:(gsize)ncolorStops
 {
-	GskRadialGradientNode* gobjectValue = GSK_RADIAL_GRADIENT_NODE(gsk_radial_gradient_node_new(bounds, center, hradius, vradius, start, end, colorStops, ncolorStops));
+	GskRadialGradientNode* gobjectValue = (gsk_radial_gradient_node_new(bounds, center, hradius, vradius, start, end, colorStops, ncolorStops));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskRadialGradientNode*)castedGObject
-{
-	return GSK_RADIAL_GRADIENT_NODE([self gObject]);
-}
+
 
 - (const graphene_point_t*)center
 {

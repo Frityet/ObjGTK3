@@ -109,7 +109,7 @@
 
 - (OGInputStream*)inputStream
 {
-	GInputStream* gobjectValue = GIO_INPUT_STREAM(gtk_media_file_get_input_stream([self castedGObject]));
+	GInputStream* gobjectValue = G_INPUT_STREAM(gtk_media_file_get_input_stream([self castedGObject]));
 
 	OGInputStream* returnValue = [OGInputStream withGObject:gobjectValue];
 	return returnValue;

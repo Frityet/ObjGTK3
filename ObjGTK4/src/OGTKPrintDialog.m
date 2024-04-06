@@ -103,7 +103,7 @@
 {
 	GError* err = NULL;
 
-	GOutputStream* gobjectValue = GIO_OUTPUT_STREAM(gtk_print_dialog_print_finish([self castedGObject], result, &err));
+	GOutputStream* gobjectValue = G_OUTPUT_STREAM(gtk_print_dialog_print_finish([self castedGObject], result, &err));
 
 	if(err != NULL) {
 		OGErrorException* exception = [OGErrorException exceptionWithGError:err];

@@ -10,11 +10,6 @@
 
 @implementation OGGdkGrabBrokenEvent
 
-- (GdkGrabBrokenEvent*)castedGObject
-{
-	return GDK_GRAB_BROKEN_EVENT([self gObject]);
-}
-
 - (OGGdkSurface*)grabSurface
 {
 	GdkSurface* gobjectValue = GDK_SURFACE(gdk_grab_broken_event_get_grab_surface([self castedGObject]));

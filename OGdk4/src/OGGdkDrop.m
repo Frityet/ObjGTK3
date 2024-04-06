@@ -80,7 +80,7 @@
 {
 	GError* err = NULL;
 
-	GInputStream* gobjectValue = GIO_INPUT_STREAM(gdk_drop_read_finish([self castedGObject], result, outMimeType, &err));
+	GInputStream* gobjectValue = G_INPUT_STREAM(gdk_drop_read_finish([self castedGObject], result, outMimeType, &err));
 
 	if(err != NULL) {
 		OGErrorException* exception = [OGErrorException exceptionWithGError:err];

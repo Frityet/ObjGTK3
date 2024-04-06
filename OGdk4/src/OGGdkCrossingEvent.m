@@ -8,10 +8,6 @@
 
 @implementation OGGdkCrossingEvent
 
-- (GdkCrossingEvent*)castedGObject
-{
-	return GDK_CROSSING_EVENT([self gObject]);
-}
 
 - (GdkNotifyType)detail
 {

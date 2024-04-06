@@ -66,7 +66,7 @@
 
 - (OGMenuModel*)headerMenu
 {
-	GMenuModel* gobjectValue = GIO_MENU_MODEL(gtk_column_view_column_get_header_menu([self castedGObject]));
+	GMenuModel* gobjectValue = G_MENU_MODEL(gtk_column_view_column_get_header_menu([self castedGObject]));
 
 	OGMenuModel* returnValue = [OGMenuModel withGObject:gobjectValue];
 	return returnValue;

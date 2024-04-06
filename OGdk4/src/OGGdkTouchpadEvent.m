@@ -8,11 +8,6 @@
 
 @implementation OGGdkTouchpadEvent
 
-- (GdkTouchpadEvent*)castedGObject
-{
-	return GDK_TOUCHPAD_EVENT([self gObject]);
-}
-
 - (void)deltasWithDx:(double*)dx dy:(double*)dy
 {
 	gdk_touchpad_event_get_deltas([self castedGObject], dx, dy);

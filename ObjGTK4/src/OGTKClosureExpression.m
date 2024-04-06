@@ -10,7 +10,7 @@
 
 - (instancetype)initWithValueType:(GType)valueType closure:(GClosure*)closure nparams:(guint)nparams params:(GtkExpression**)params
 {
-	GtkClosureExpression* gobjectValue = GTK_CLOSURE_EXPRESSION(gtk_closure_expression_new(valueType, closure, nparams, params));
+	GtkClosureExpression* gobjectValue = (gtk_closure_expression_new(valueType, closure, nparams, params));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -23,11 +23,5 @@
 	g_object_unref(gobjectValue);
 	return self;
 }
-
-- (GtkClosureExpression*)castedGObject
-{
-	return GTK_CLOSURE_EXPRESSION([self gObject]);
-}
-
 
 @end

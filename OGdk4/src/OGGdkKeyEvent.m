@@ -8,11 +8,6 @@
 
 @implementation OGGdkKeyEvent
 
-- (GdkKeyEvent*)castedGObject
-{
-	return GDK_KEY_EVENT([self gObject]);
-}
-
 - (GdkModifierType)consumedModifiers
 {
 	GdkModifierType returnValue = gdk_key_event_get_consumed_modifiers([self castedGObject]);

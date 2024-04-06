@@ -93,7 +93,7 @@
 
 - (OGMenuModel*)menuModel
 {
-	GMenuModel* gobjectValue = GIO_MENU_MODEL(gtk_menu_button_get_menu_model([self castedGObject]));
+	GMenuModel* gobjectValue = G_MENU_MODEL(gtk_menu_button_get_menu_model([self castedGObject]));
 
 	OGMenuModel* returnValue = [OGMenuModel withGObject:gobjectValue];
 	return returnValue;

@@ -12,7 +12,7 @@
 
 - (instancetype)initWithTexture:(OGGdkTexture*)texture bounds:(const graphene_rect_t*)bounds filter:(GskScalingFilter)filter
 {
-	GskTextureScaleNode* gobjectValue = GSK_TEXTURE_SCALE_NODE(gsk_texture_scale_node_new([texture castedGObject], bounds, filter));
+	GskTextureScaleNode* gobjectValue = (gsk_texture_scale_node_new([texture castedGObject], bounds, filter));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -26,10 +26,7 @@
 	return self;
 }
 
-- (GskTextureScaleNode*)castedGObject
-{
-	return GSK_TEXTURE_SCALE_NODE([self gObject]);
-}
+
 
 - (GskScalingFilter)filter
 {

@@ -10,7 +10,7 @@
 
 - (instancetype)initWithRgba:(const GdkRGBA*)rgba bounds:(const graphene_rect_t*)bounds
 {
-	GskColorNode* gobjectValue = GSK_COLOR_NODE(gsk_color_node_new(rgba, bounds));
+	GskColorNode* gobjectValue = (gsk_color_node_new(rgba, bounds));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskColorNode*)castedGObject
-{
-	return GSK_COLOR_NODE([self gObject]);
-}
+
 
 - (const GdkRGBA*)color
 {

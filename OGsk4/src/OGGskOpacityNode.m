@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child opacity:(float)opacity
 {
-	GskOpacityNode* gobjectValue = GSK_OPACITY_NODE(gsk_opacity_node_new(child, opacity));
+	GskOpacityNode* gobjectValue = (gsk_opacity_node_new(child, opacity));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskOpacityNode*)castedGObject
-{
-	return GSK_OPACITY_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

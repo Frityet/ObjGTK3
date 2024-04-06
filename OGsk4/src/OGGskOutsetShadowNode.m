@@ -10,7 +10,7 @@
 
 - (instancetype)initWithOutline:(const GskRoundedRect*)outline color:(const GdkRGBA*)color dx:(float)dx dy:(float)dy spread:(float)spread blurRadius:(float)blurRadius
 {
-	GskOutsetShadowNode* gobjectValue = GSK_OUTSET_SHADOW_NODE(gsk_outset_shadow_node_new(outline, color, dx, dy, spread, blurRadius));
+	GskOutsetShadowNode* gobjectValue = (gsk_outset_shadow_node_new(outline, color, dx, dy, spread, blurRadius));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskOutsetShadowNode*)castedGObject
-{
-	return GSK_OUTSET_SHADOW_NODE([self gObject]);
-}
+
 
 - (float)blurRadius
 {

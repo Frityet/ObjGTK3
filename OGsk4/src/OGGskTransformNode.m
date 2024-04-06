@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child transform:(GskTransform*)transform
 {
-	GskTransformNode* gobjectValue = GSK_TRANSFORM_NODE(gsk_transform_node_new(child, transform));
+	GskTransformNode* gobjectValue = (gsk_transform_node_new(child, transform));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskTransformNode*)castedGObject
-{
-	return GSK_TRANSFORM_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

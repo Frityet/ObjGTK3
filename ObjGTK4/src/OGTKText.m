@@ -84,7 +84,7 @@
 
 - (OGMenuModel*)extraMenu
 {
-	GMenuModel* gobjectValue = GIO_MENU_MODEL(gtk_text_get_extra_menu([self castedGObject]));
+	GMenuModel* gobjectValue = G_MENU_MODEL(gtk_text_get_extra_menu([self castedGObject]));
 
 	OGMenuModel* returnValue = [OGMenuModel withGObject:gobjectValue];
 	return returnValue;

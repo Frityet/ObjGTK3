@@ -10,7 +10,7 @@
 
 - (instancetype)initWithChild:(GskRenderNode*)child path:(GskPath*)path fillRule:(GskFillRule)fillRule
 {
-	GskFillNode* gobjectValue = GSK_FILL_NODE(gsk_fill_node_new(child, path, fillRule));
+	GskFillNode* gobjectValue = (gsk_fill_node_new(child, path, fillRule));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -24,10 +24,7 @@
 	return self;
 }
 
-- (GskFillNode*)castedGObject
-{
-	return GSK_FILL_NODE([self gObject]);
-}
+
 
 - (GskRenderNode*)child
 {

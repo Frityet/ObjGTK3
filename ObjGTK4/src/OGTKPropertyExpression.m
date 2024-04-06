@@ -10,7 +10,7 @@
 
 - (instancetype)initWithThisType:(GType)thisType expression:(GtkExpression*)expression propertyName:(OFString*)propertyName
 {
-	GtkPropertyExpression* gobjectValue = GTK_PROPERTY_EXPRESSION(gtk_property_expression_new(thisType, expression, [propertyName UTF8String]));
+	GtkPropertyExpression* gobjectValue = GTK_EXPRESSION(gtk_property_expression_new(thisType, expression, [propertyName UTF8String]));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -26,7 +26,7 @@
 
 - (instancetype)initForPspecWithExpression:(GtkExpression*)expression pspec:(GParamSpec*)pspec
 {
-	GtkPropertyExpression* gobjectValue = GTK_PROPERTY_EXPRESSION(gtk_property_expression_new_for_pspec(expression, pspec));
+	GtkPropertyExpression* gobjectValue = GTK_EXPRESSION(gtk_property_expression_new_for_pspec(expression, pspec));
 
 	@try {
 		self = [super initWithGObject:gobjectValue];
@@ -38,11 +38,6 @@
 
 	g_object_unref(gobjectValue);
 	return self;
-}
-
-- (GtkPropertyExpression*)castedGObject
-{
-	return GTK_PROPERTY_EXPRESSION([self gObject]);
 }
 
 - (GtkExpression*)expression
