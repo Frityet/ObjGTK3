@@ -5,6 +5,12 @@ package("gio")
     add_extsources("pkgconfig::gio-2.0")
     add_extsources("pkgconfig::gio")
 
+    add_extsources("brew::glib")
+    add_extsources("apt::libglib2.0-dev")
+    add_extsources("vcpkg::glib")
+    add_extsources("pacman::glib2")
+    add_extsources("dnf::glib2")
+
     add_deps("glib")
 
 
@@ -15,7 +21,7 @@ package("gio-unix")
     add_extsources("pkgconfig::gio-unix-2.0")
     add_extsources("pkgconfig::gio-unix")
 
-    add_deps("glib", "gio")
+    add_deps("gio")
 
 package("atk")
     set_homepage("https://docs.gtk.org/atk/")
@@ -23,6 +29,7 @@ package("atk")
     set_license("LGPL-2.1")
     add_extsources("pkgconfig::atk-1.0")
     add_extsources("pkgconfig::atk")
+
 
     add_deps("glib")
 
