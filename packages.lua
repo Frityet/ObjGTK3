@@ -9,7 +9,6 @@ package("gio")
     add_extsources("apt::libglib2.0-dev")
     add_extsources("vcpkg::glib")
     add_extsources("pacman::glib2")
-    add_extsources("dnf::glib2")
 
     add_deps("glib")
 
